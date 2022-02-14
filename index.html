@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Transparency in the Evidence-Based-Policy Pipeline: Challenges and Solutions</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Fernando Hoces de la Guardia, BITSS" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Transparency in the Evidence-Based-Policy Pipeline: Challenges and Solutions
+## Data H195A, UC Berkeley
+### Fernando Hoces de la Guardia, BITSS
+### November 2021 | <a href="https://bitss.github.io/Berkeley-DATAH195A-slides/">slides</a>
+
+---
+
+background-image: url("Images/BITSSlogo.png"), url(Images/cega.png)
+background-size: contain, 200px
+background-position: 50% 100% , 0% 100% 
+count:true 
+
+#[BITSS](https://bitss.org)   
+
+&lt;style&gt;
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+pre.sourceCode {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+
+/*
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: blue;
+}
+*/
+&lt;/style&gt;
+
+
+
+&lt;style type="text/css"&gt;
+# CSS for including pauses in printed PDF output (see bottom of lecture)
+@media print {
+  .has-continuation {
+    display: block !important;
+  }
+}
+
+&lt;/style&gt;
+
+
+
+
+
+
+
+.pull-left[
+The Berkeley Initiative for Transparency in the Social Sciences works to improve &lt;/br&gt;the credibility of science by &lt;/br&gt;
+advancing transparency, &lt;/br&gt; reproducibility,  rigor, and &lt;/br&gt; ethics in research and policy analysis. 
+
+.font130[**Core Team**]
+  
+
+ Aleks Bogdanoski  
+
+ Fernando Hoces  de la Guardia
+ 
+ Katie Hoeberling  
+ 
+ Edward Miguel
+
+]
+.pull-right[ .right[
+We are part of the Center for Effective Global Action ([CEGA](https://cega.berkeley.edu/)).   
+ &lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+.font130[**Many Others**]
+
+CEGA staff
+
+Undergrad and Graduate RAs
+
+Catalysts
+
+Outside Collaborators   
+(Researchers, Programmers)
+  ]]
+ 
+---
+
+background-image: url("Images/ecosystem.PNG"), url(Images/cega.png)
+background-size: contain, 200px
+background-position: 50% 100% , 0% 100% 
+name: about-bitss
+count:true 
+
+# Part of the much larger Open Science Community 
+
+
+---
+background-image: url(Images/figure_1_1.png)
+background-size: 900px 
+background-position: 50% 80%
+
+# Today's Presentation
+
+.font180[
+- Part I: Transparency in Research 
+
+
+- Part II: Transparency in Policy Analysis 
+
+]
+
+
+
+---
+background-image: url(Images/figure_1_1_black2.png)
+background-size: 900px 
+background-position: 50% 80%
+count: false
+
+# Today's Presentation
+
+.font180[
+- **Part I: Transparency in Research **
+
+
+- Part II: Transparency in Policy Analysis 
+
+]
+
+
+
+---
+
+# What does it mean to do good science?
+
+.font160[
+Scientific Norms (Merton, 1942, [1973](https://sciencepolicy.colorado.edu/students/envs_5110/merton_sociology_science.pdf)): 
+
+- **Disinterestedness**: search for the truth
+
+- **Organized skepticism**: peer review and replication
+
+- **Communality**: researchers should share all the scientific output (papers, data, code and materials) 
+
+- **Universalism**: validity comes from quality of a scientific finding and not the hierarchies of those making the claims.
+]
+
+
+---
+background-image: url("Images/AMdV2007_01.PNG")
+background-size: contain
+background-position: 50% 100%  
+count:false
+
+# .font80[Researchers and Scientific Norms (Anderson et. al., 2007)]
+
+
+---
+background-image: url("Images/AMdV2007_02.png")
+background-size: contain
+background-position: 50% 100%  
+count:false
+
+# .font80[Researchers and Scientific Norms (Anderson et. al., 2007)]
+
+
+
+---
+background-image: url("Images/AMdV2007.png")
+background-size: contain
+background-position: 50% 100%  
+count:true
+
+# .font80[Researchers and Scientific Norms (Anderson et. al., 2007)]
+
+
+---
+background-image: url("Images/Brodeur.PNG")
+background-size: contain
+background-position: 50% 100%  
+
+
+# P-hacking (for Economics: Brodeur et. al 2016, 2020)
+
+
+---
+background-image: url("Images/Tess.PNG")
+background-size: contain
+background-position: 50% 100%  
+
+
+# Publication Bias (Franco et. al. 2014)
+
+
+---
+# .font80[ Low Replicability and Reproducibility ("Reproducibility Crisis")]
+&lt;/br&gt;&lt;/br&gt;
+
+.font180[
+| Replication in Social Sciences&lt;br&gt;(same method, different sample) 	| Reproduction in Economics&lt;br&gt;(same data and methods) 	|
+|-------------------------------------------------------------------	|------------------------------------------------------	|
+| OSC ([2015](https://docs.google.com/document/d/1mm_4HZnEz_2Bh8XuiS2tpqCH08MFPyqUhi1baKPqR8Y/edit#heading=h.7vqf2cziid7z)): 30%-60%                      	                          | Chang &amp; Li ([2015](https://www.nowpublishers.com/article/Details/CFR-0053)): 43%                               	|
+| Camerer et. al. ([2016](https://science.sciencemag.org/content/351/6280/1433)): ~60%                                      	| Gertler et. al. ([2017](https://www.nature.com/articles/d41586-018-02108-9)): 14%                          	|
+| Nosek &amp; Camerer et. al. ([2018](https://www.nature.com/articles/s41562-018-0399-z)): ~60%                              	| Kingi et. al. ([2018](https://hautahi.com/static/docs/Replication_aejae.pdf)): 43%                            	|
+| Klein et. al. ([2018](https://journals.sagepub.com/doi/10.1177/2515245918810225)): 50%                                         	| Wood et. al. ([2018](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0209416#abstract0)): 25%                             	|
+]
+
+---
+name: bitss 
+
+# Main Solutions
+
+.font160[
+1. Registrations
+
+2. Pre Analysis Plans 
+
+3. Computational Reproducibility
+
+4. Others: Reporting Guidelines, Pre-prints, etc. 
+
+]
+
+---
+# Registrations
+&lt;br&gt;
+.font130[
+- A registration is a record that contains minimal information about a study: title, authors, study country, status, keywords, abstract, start and end dates, outcomes, intervention information, basic research design, whether or not treatments are clustered (when performing an RCT), and Institutional Review Board (IRB) information. 
+
+
+- Preferably, it should be recorded before analyzing data
+
+- **The main goal:** track the complete body of knowledge in a topic of research, regardless of the direction and magnitude of the results.
+
+]
+
+
+---
+background-image: url("Images/plosone.PNG")
+background-size: contain
+background-position: 50% 100%  
+
+# Why Register: Kaplan and Irvin (2015)
+
+
+---
+# Pre-Analysis Plans
+&lt;br&gt;
+.font140[
+- PAPs are **extensive** methodological descriptions of the analysis to be performed before the endline data is collected
+
+- Helps to prevents p-hacking  
+
+- Only way to guarantee accurate statistical testing
+
+- Distinguishes confirmatory from exploratory analysis
+]
+
+---
+# Common Concerns About PAPs
+&lt;br&gt;
+.font130[
+|                                                           Critique                                                           |                                                                                                Response                                                                                               |
+|:----------------------------------------------------------------------------------------------------------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|                                PAPs take too much time and are &lt;br&gt;too difficult (Olken 2015)                                |                                                         A PAP changes the timing of the analytic &lt;br&gt;component, not clear that it increases it                                                        |
+|                  Scientific discovery often comes&lt;br&gt;from surprises. PAPs stifle &lt;br&gt;discovery (Olken 2015)                  |           PAPs do not prevent researchers from doing &lt;br&gt;exploratory work; they only require &lt;br&gt;researchers to be clear about the objectives &lt;br&gt;of their analyses (Ofosu and Posner 2020).          |
+| If replications are cheap they will &lt;br&gt;rule out false positives, making &lt;br&gt;PAPs irrelevant.&lt;br&gt;(Coffman and Niederle 2015) | Very few experiments are inexpensive as to perform &lt;br&gt;many replications. Moreover, most of the false &lt;br&gt;positives have been identified where experiments &lt;br&gt;are least expensive (lab experiments). |
+]
+
+---
+background-image: url("Images/results_blind_review.png")
+background-size: contain
+background-position: 50% 100%  
+# Another Reason: Register Reports
+
+---
+count:false
+# .font90[Computational Reproducibility: Why?]     
+
+
+.pull-left[
+.font120[
+    &lt;blockquote&gt;
+    Clarebout Principle:
+    &lt;/br&gt;&lt;/br&gt;
+    “An article about computational science in a scientific publication is not the scholarship itself, it’s merely scholarship advertisement. The actual scholarship is the complete software development environment and the complete set of instructions which generated the figures.”
+&lt;/br&gt;&lt;/br&gt;    
+.right[  &lt;cite&gt; Buckheit and D.L. Donoho (1995, [2009](https://academiccommons.columbia.edu/doi/10.7916/D8QZ2MDS/download))&lt;/cite&gt; ]
+    &lt;/blockquote&gt;
+]
+]
+
+
+
+---
+background-image: url("Images/iceberg.jpg")
+background-size: 50%
+background-position: 100% 50%
+
+# .font90[Computational Reproducibility: Why?]     
+
+.pull-left[
+.font120[
+    &lt;blockquote&gt;
+    Clarebout Principle:
+    &lt;/br&gt;&lt;/br&gt;
+    “An &lt;b&gt;article&lt;/b&gt; about computational science in a scientific publication is not the scholarship itself, &lt;b&gt;it’s merely scholarship advertisement&lt;/b&gt;. The actual &lt;b&gt;scholarship is the complete software development environment and the complete set of instructions which generated the figures&lt;/b&gt;.”
+&lt;/br&gt;&lt;/br&gt;    
+.right[  &lt;cite&gt; Buckheit and D.L. Donoho (1995, [2009](https://academiccommons.columbia.edu/doi/10.7916/D8QZ2MDS/download))&lt;/cite&gt; ]
+    &lt;/blockquote&gt;
+]
+]
+---
+# .font90[More Inclusive Concept Scholarly Output]     
+
+.font130[
+Potential benefits of following the Clarebout Principle
+
+Well discussed potential positive effects on:
+- Pedagogy  
+- Incremental generation of knowledge 
+]
+--
+
+.font130[
+Under discussed:
+
+- Possible positive effect on diversity, equity and inclusion: no connections or language skills ("appropriate politeness") required to obtain materials 
+]
+
+???
+An under discussed benefit of this principle is that increases access to knowledge for students who are outside of elite schools (no connections or "appropriate politeness" required to obtain materials).   
+
+
+---
+
+# Prevent Loss of Knowledge  
+
+Every semester, graduate students around **the world** take an Empirical/Applied [`...`] Economics course. A typical assignment consists of reproducing the results of a paper and, possibly, testing the robustness of its results. 
+
+--
+   
+
+|       Stage       	|                         New Knowledge                        	|
+|:-----------------:	|:------------------------------------------------------------:	|
+|  &lt;/br&gt;&lt;/br&gt; 	|                                          	|
+| &lt;/br&gt;&lt;/br&gt;            	|  	|
+| &lt;/br&gt;&lt;/br&gt;           	|  	|
+| &lt;/br&gt;&lt;/br&gt;   	|  &lt;/br&gt;          	|
+
+
+
+
+---
+count:false 
+
+# Prevent Loss of Knowledge  
+
+Every semester, graduate students around **the world** take an Empirical/Applied [`...`] Economics course. A typical assignment consists of reproducing the results of a paper and, possibly, testing the robustness of its results. 
+
+   
+
+|       Stage       	|                         New Knowledge                        	|
+|:-----------------:	|:------------------------------------------------------------:	|
+| Scope &lt;/br&gt; (select and verify) 	| Data and code exist?                                         	|
+| &lt;/br&gt;&lt;/br&gt;            	|  	|
+| &lt;/br&gt;&lt;/br&gt;           	|  	|
+| &lt;/br&gt;&lt;/br&gt;   	|  &lt;/br&gt;          	|
+
+---
+count:false 
+
+# Prevent Loss of Knowledge  
+
+Every semester, graduate students around **the world** take an Empirical/Applied [`...`] Economics course. A typical assignment consists of reproducing the results of a paper and, possibly, testing the robustness of its results. 
+
+
+   
+
+|       Stage       	|                         New Knowledge                        	|
+|:-----------------:	|:------------------------------------------------------------:	|
+| Scope &lt;/br&gt; (select and verify) 	| Data and code exist?                                         	|
+| Assess            	| Degree of reproducibility for &lt;br&gt;specific part of the paper 	|
+| &lt;/br&gt;&lt;/br&gt;           	|  	|
+| &lt;/br&gt;&lt;/br&gt;   	|  &lt;/br&gt;          	|
+
+---
+count:false 
+
+# Prevent Loss of Knowledge  
+
+Every semester, graduate students around **the world** take an Empirical/Applied [`...`] Economics course. A typical assignment consists of reproducing the results of a paper and, possibly, testing the robustness of its results. 
+
+
+   
+
+|       Stage       	|                         New Knowledge                        	|
+|:-----------------:	|:------------------------------------------------------------:	|
+| Scope &lt;/br&gt; (select and verify) 	| Data and code exist?                                         	|
+| Assess            	| Degree of reproducibility for &lt;br&gt;specific part of the paper 	|
+| Improve           	| E.g. fixed paths, libraries,&lt;br&gt;added missing files, etc.    	|
+| &lt;/br&gt;&lt;/br&gt;   	|  &lt;/br&gt;          	|
+
+---
+count:false 
+
+# Prevent Loss of Knowledge  
+
+Every semester, graduate students around **the world** take an Empirical/Applied [`...`] Economics course. A typical assignment consists of reproducing the results of a paper and, possibly, testing the robustness of its results. 
+
+|       Stage       	|                         New Knowledge                        	|
+|:-----------------:	|:------------------------------------------------------------:	|
+| Scope &lt;/br&gt; (select and verify) 	| Data and code exist?                                         	|
+| Assess            	| Degree of reproducibility for &lt;br&gt;specific part of the paper 	|
+| Improve           	| E.g. fixed paths, libraries,&lt;br&gt;added missing files, etc.    	|
+| Test robustness   	| Results are robust to additional &lt;br&gt;specifications          	|
+
+
+---
+
+# Prevent Loss of Knowledge  
+&lt;/br&gt;
+.font120[
+- In each of the previous steps there was valuable new knowledge 
+- This knowledge is not usually disseminated  
+  - End of semester report, or presentation that is not published. 
+  - Language across courses is not standard (reproduction? replication?)
+  - Current attempts to record this are closer to a full paper format (see [Replication Wiki](https://replication.uni-goettingen.de/))
+- As a result there is a large amount of missed knowledge.  
+   - Each new semester, new students repeat similar excesses and have to reinvent the wheel.  
+   - Lost opportunity for building on top of previous exercises. 
+   - Lost opportunity for aggregating the new knowledge.
+]
+
+---
+name: guidelines
+
+# Context for ACRE
+
+- American Economics Association (AEA) creates first data policy in 2006.  
+
+    - Must publish some data (waivers available)
+--
+
+- AEA updates [policy in 2019](https://www.aeaweb.org/journals/policies/data-code/). 
+    - Must post all data and code. Publication is conditional on verifying reproducibility (if confidential: must document extensively) 
+    - A new requirement is to post all cleaning code, even for data that is not public
+--
+- We should expect high levels of computational reproducibility after 2019 (AEA). 
+--
+
+- We should not demand 100% reproducibility before, but we could identify the gaps and try to improve some. 
+
+---
+# .font90[**A**ccelerating **C**omputational **Re**producibility: Framework]
+
+## Beyond Binary Judgments    
+
+Reproductions can easily gravitate towards adversarial exchanges.
+  - Early career researchers (ECR) have incentives to emphasize unsuccessful reproductions 
+  - Original authors have a more senior position and can use it to deter in-depth reproductions from ECRs. 
+  - The media also focuses on eye-catching headlines
+
+--
+
+
+### Our approach: 
+
+We do not want to say 
+ &gt; "Paper X is (ir)reproducible"    
+ 
+  
+--
+We do want to say 
+ &gt; "Result Y in paper X has a high/low level of reproducibility according to several reproduction attempts. Moreover, improvements have been made to the original reproduction package, increasing its reproducibility to a higher level" 
+
+---
+count: true  
+background-image: url(Images/paper-claims.svg)
+background-size: 610px
+background-position: 75% 0%
+  
+# ACRe Framework
+
+.pull-left[
+.font100[
+Each **reproduction attempt** is centered &lt;br&gt;
+around scientific **claims** (following [SCORE](https://replicats.research.unimelb.edu.au)). 
+
+One paper can contain several claims. 
+
+Each claim may be supported by various &lt;/br&gt;
+**display items**: tables, figures &amp; inline results.
+
+A reproduction attempt is at the claim level, &lt;br&gt;
+and reproducers must record their &lt;br&gt; 
+**specifications** of interest.  
+
+Key challenge: **standardization** of concepts &lt;br&gt; 
+and formats.
+
+
+]
+                                
+                                  
+                                               DI: Display Item 
+                                                S: Specificaiton
+]
+.pull-right[ 
+]
+
+
+
+---
+background-image:  url(Images/home_page.png)
+background-size: contain
+count:true
+
+.center[
+# Demo: [socialsciencereproduction.org]()
+]
+---
+background-image:  url(Images/stages.svg)
+background-size: contain
+
+# Stages
+
+---
+background-image: url(Images/select.svg),  url(Images/select_paper.png) 
+background-size: 400px,  700px
+background-position: 95% 100%,   0% 10%
+count:false
+
+# Select a paper
+
+---
+background-image: url(Images/select.svg), url(Images/select_example.png), url(Images/select_paper.png) 
+background-size: 400px,  600px, 700px 
+background-position: 95% 100%,  100% 0%, 0% 10%
+count:true
+
+# Select a paper
+
+
+---
+background-image: url(Images/scope.svg), url(Images/scope_paper.png)
+background-size: 400px,  700px
+background-position: 95% 100%, 0% 10%
+count:false
+
+# Scope
+
+---
+background-image: url(Images/scope.svg), url(Images/scope_paper2.png)  , url(Images/scope_paper.png)
+background-size: 400px,  500px, 700px
+background-position: 95% 100%,   90% 0%, 0% 10%
+count:false
+
+# Scope
+
+---
+background-image: url(Images/scope.svg), url(Images/scope_example.png), url(Images/scope_paper2.png)  , url(Images/scope_paper.png)
+background-size: 400px,  600px, 500px, 700px
+background-position: 95% 100%,  100% 75%,  90% 0%, 0% 10%
+count:true
+
+# Scope
+
+---
+background-image: url(Images/assess.svg), url(Images/assess_paper1.png)
+background-size: 400px, 120px
+background-position: 95% 100%, 0% 10%
+count:false
+
+# Assess 
+---
+background-image: url(Images/assess.svg), url(Images/assess_paper2.png)
+background-size: 400px,  120px
+background-position: 95% 100%, 0% 10%
+count:false
+
+
+# Assess 
+
+---
+background-image: url(Images/assess.svg), url(Images/assess_example1.png), url(Images/assess_paper2.png)
+background-size: 400px,  500px, 120px
+background-position: 95% 100%,  15% 50%, 0% 10%
+count:false
+
+
+# Assess 
+
+---
+background-image: url(Images/assess_example2.png), url(Images/assess.svg), url(Images/assess_example1.png)  , url(Images/assess_paper2.png)
+background-size:  600px, 400px,  500px, 120px 
+background-position: 100% 80%,95% 100%,    15% 50%, 0% 10%
+count:true
+
+
+
+# Assess 
+
+
+---
+background-image: url(Images/improve.svg)
+background-size: 700px
+background-position: 50% 20% 
+
+
+# Improvements 
+
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+
+## Three types of improvements: 
+
+.font130[
+
+1. Improvements at the paper level 
+2. Improvements at the display-item level  
+3. Specific future improvements   
+ ]
+---
+
+background-image: url(Images/improve.svg)
+background-size: 300px
+background-position: 0% 100% 
+
+
+# Improvements: Paper-level
+
+.font140[
+- Use version control software (Git/Github).
+- Improve documentation: comments, indentations, object names, etc.   
+- Re-organize the reproduction package into a set of folders and sub-folders that follow [standardized best practices](https://www.projecttier.org/tier-protocol/specifications/#overview-of-the-documentation), and add a master script that executes all the code in order, with no further modifications. [See AEA's reproduction template](https://github.com/AEADataEditor/replication-template).  
+- Literate programming environment (e.g., Jupyter notebooks, RMarkdown)
+- Re-write code using a differenet statistical software (ideally open source, like R, Python, or Julia).
+- Set up a computing capsule (e.g., [Binder](https://mybinder.org/) and [Code Ocean](https://codeocean.com/)).
+]
+---
+background-image: url(Images/improve.svg)
+background-size: 300px
+background-position: 0% 100% 
+
+# Improvements: Display item-level 
+&lt;/br&gt;
+
+.font120[
+- Adding missing raw data: files or meta-data  
+  - Example: "Add raw temperature and relative humidity data"
+- Adding missing analytic data files
+  - Example: "Copy the row files from Data folder into new `Analysis\trade cost\Input`"
+- Adding missing analysis or cleaning code
+  - Example: "Replaced broken Wald bootstrap code with updated code/command"
+- Debugging code  
+  - Example:  "was counting each group 4 times in round 1, so fixed that"
+
+]
+---
+background-image: url(Images/improve.svg)
+background-size: 300px
+background-position: 0% 100% 
+
+# Improvements: future possible 
+
+We ask reproducer to leave concise and actionable tasks for other reproducers in the future. 
+
+Example 1: 
+&gt;"Revise the .aml and .bat code scripts to reflect reorganized structure"
+
+
+Example 2: 
+&gt; "Provide data and codes generating the other two figures in the paper, which are not given in the replication file."
+
+
+Example 3: 
+&gt; "Table 3 can be reproduced identically from the [...] analytic data files. I was not able to reproduce the analytic data files due to lack of access to ArcGIS software, but the code scripts and raw data files [...] are included in the reproduction package."
+
+---
+background-image: url(Images/robust.svg)
+background-size: 700px
+background-position: 50% 20% 
+
+
+# Robustness Checks 
+
+&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;&lt;/br&gt;
+
+## Two main parts for robustness: 
+
+.font130[
+1. Increase the number of robustness checks
+2. Justify the appropriateness of a specific test
+ ]
+ 
+---
+background-image: url(Images/robust.svg), url("Images/robustness checks.svg")
+background-size: 300px, 500px
+background-position: 0% 100%, 100% 60%  
+
+# Robustness
+
+**Robustness checks:** any possible change in a computational choice, both in data analysis and data cleaning
+--
+
+.pull-left[
+**Reasonable specifications** ([Simonsohn et. al., 2018](https://urisohn.com/sohn_files/wp/wordpress/wp-content/uploads/Paper-Specification-curve-2018-11-02.pdf)): 
+
+ 1. Sensible tests of the research question
+ 2. Expected to be statistically valid, and 
+ 3. Not redundant with other specifications in the set.
+
+Reproducers will be able to record two types of contributions: 
+
+- Mapping the universe of robustness checks
+- Proposing a specific robustness check
+]
+---
+background-image: url(Images/robust.svg)
+background-size: 400px
+background-position: 95% 95%
+
+# Robustness &amp; Reproducibility
+
+.pull-left[
+Robustness with level 1
+
+&lt;img src="Images/robustness_lvl0.svg" width="60%" style="display: block; margin: auto;" /&gt;
+
+Robustness with levels 5-9
+
+&lt;img src="Images/robustness checks.svg" width="60%" style="display: block; margin: auto;" /&gt;
+
+]
+
+.pull-left[
+Robustness with levels 2-4
+
+&lt;img src="Images/robustness_lvl2_4.svg" width="60%" style="display: block; margin: auto;" /&gt;
+
+
+Robustness with level 10
+
+&lt;img src="Images/robustness_lvl10.svg" width="60%" style="display: block; margin: auto;" /&gt;
+]
+---
+background-image:  url(Images/completed_repro1.png)
+background-size:   450px
+background-position:  0% 0%   
+count:false
+# Completed Reproduction: [Example](https://www.socialsciencereproduction.org/reproductions/40/published/index)
+
+
+---
+background-image: url(Images/completed_repro2.png), url(Images/completed_repro1.png)
+background-size:  300px, 450px
+background-position:  35% 0%, 0% 0%   
+count:false
+# Completed Reproduction: [Example](https://www.socialsciencereproduction.org/reproductions/40/published/index)
+
+---
+background-image: url(Images/completed_repro3.png) ,url(Images/completed_repro2.png), url(Images/completed_repro1.png)
+background-size:  600px ,  300px, 450px
+background-position:  100% 10%, 35% 0%, 0% 0%   
+count:true
+# Completed Reproduction: [Example](https://www.socialsciencereproduction.org/reproductions/40/published/index)
+
+.pull-right[
+
+.font130[
+ &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+ 
+ - **Share it:** Original authors, instructors, other researchers, add it to your CV
+ - **Discuss it:** Discourse forum for reproductions
+ - **Cite it:**    Reproduction DOI coming soon
+ ]
+
+]
+
+
+---
+
+# Promoting a Constructive Exchange 
+.font120[
+#### 1 - Contacting the original author(s) when there is no reproduction package
+#### 2 - Contacting the original author(s) to request specific missing items of a reproduction package
+#### 3 - Asking for additional guidance when some materials have been shared  
+#### 4 - Response when the original author has refused to share due to *undisclosed reasons*   
+#### 5 - Response when the original author has refused to share due to legal or ethical restrictions of the data
+#### 6 - Contacting the original author to share the results of your reproduction exercise
+#### 7 - Responding to hostile responses from original authors
+
+#### Additionally: sample responses form authors to reproducers
+]
+---
+
+
+# .font80[Example 1: There is no reproduction package]
+
+.font70[
+&gt;**Subject:** Reproduction package for `[“Title of the paper”]`
+
+&gt;Dear Dr. `[Lastname of Corresponding Author]`,
+&gt;
+&gt; I am contacting you to request a reproduction package for your paper titled `[Title]` which was published in `[Reference]`. A reproduction package may contain (raw and/or analytic) data, code, and other documentation that makes it possible to reproduce paper. Would you be able to share any of these items?
+&gt;
+&gt;I am a `[position]` at `[Institution]`, and I would like to reproduce the results, tables, and other figures using the reproduction materials mentioned above. I have chosen this paper because `[add context ...]`. Unfortunately, I was not able to locate any of these materials on the journal website, Dataverse `[or other data and code repositories]`, or in your website.
+&gt;
+&gt;I will record the result of my reproduction attempt on ACRE [...]. With your permission, I will also record the materials you share with me, which would allow access for other reproducers and avoid repeated requests directed to you. Please let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.
+&gt;
+&gt;In addition to your response above, would you be available to respond to future (non-repetitive) inquiries from me or other reproducers conducting an ACRE excercise? Though your cooperation with my and/or any future request would be extremely helpful, please note that you are *not required to comply*.
+
+&gt;Since I am required to complete this project by `[date]`, I would appreciate your response by `[deadline]`.
+&gt;
+&gt;Let me know if you have any questions. Please also feel free to contact my supervisor/instructor `[Name (email)]` for further details on this exercise. Thank you in advance for your help!
+&gt;
+&gt;Best regards,  
+&gt;`[Reproducer]`
+]
+
+---
+count:false
+
+# .font80[Example 1: There is no reproduction package]
+
+.font70[
+&gt;**Subject:** Reproduction package for `[“Title of the paper”]`
+
+&gt;Dear Dr. `[Lastname of Corresponding Author]`,
+&gt;
+&gt; I am contacting you to request a reproduction package for your paper titled `[Title]` which was published in `[Reference]`. A reproduction package may contain (raw and/or analytic) data, code, and other documentation that makes it possible to reproduce paper. Would you be able to share any of these items?
+&gt;
+&gt;I am a `[position]` at `[Institution]`, and I would like to reproduce the results, tables, and other figures using the reproduction materials mentioned above. I have chosen this paper because `[add context ...]`. **Unfortunately, I was not able to locate any of these materials on the journal website, Dataverse `[or other data and code repositories]`, or in your website**.
+&gt;
+&gt;**I will record the result of my reproduction attempt on ACRE [...]. With your permission, I will also record the materials you share with me, which would allow access for other reproducers and avoid repeated requests directed to you. Please let me know if there are any legal or ethical restrictions that apply to all or parts of the reproduction materials so that I can take that into consideration during this exercise.**
+&gt;
+&gt;In addition to your response above, would you be available to respond to future (non-repetitive) inquiries from me or other reproducers conducting an ACRE excercise? **Though your cooperation with my and/or any future request would be extremely helpful, please note that you are *not required to comply*.**
+
+&gt;Since I am required to complete this project by `[date]`, I would appreciate your response by `[deadline]`.
+&gt;
+&gt;Let me know if you have any questions. Please also feel free to contact my supervisor/instructor `[Name (email)]` for further details on this exercise. Thank you in advance for your help!
+&gt;
+&gt;Best regards,  
+&gt;`[Reproducer]`
+]
+
+---
+
+# .font80[Example 1: Following up on additional materials]
+
+**Template email:**  
+
+&gt;**Subject:** Clarification for reproduction materials for `[“Title of the paper”]`  
+
+&gt;Dear Dr. `[Lastname of Corresponding Author]`,
+&gt;
+&gt;Thank you for sharing the materials. They have been immensely helpful for my work.
+&gt;
+&gt;Unfortunately, I ran into a few issues as I delved into the reproduction exercise, and I think your guidance would be helpful in resolving them. `[Describe the issues and how you have tried to resolve them. Describe whatever files or parts of the data or code are missing. Refer to examples 1 and 2 below for more details]`.  
+&gt;  
+&gt;Thank you in advance for your help.
+&gt;  
+&gt;Best regards,  
+&gt;`[Reproducer]`  
+
+---
+count:false
+# .font80[Example 1: Following up on additional materials]
+
+**Template email:**  
+
+&gt;**Subject:** Clarification for reproduction materials for `[“Title of the paper”]`  
+
+&gt;Dear Dr. `[Lastname of Corresponding Author]`,
+&gt;
+&gt;Thank you for sharing the materials. They have been immensely helpful for my work.
+&gt;
+&gt;Unfortunately, I ran into a few issues as I delved into the reproduction exercise, and I think your guidance would be helpful in resolving them. **`[Describe the issues and how you have tried to resolve them. Describe whatever files or parts of the data or code are missing. Refer to examples 1 and 2 below for more details]`**.  
+&gt;  
+&gt;Thank you in advance for your help.
+&gt;  
+&gt;Best regards,  
+&gt;`[Reproducer]`  
+
+
+---
+
+# An example of well described issues:
+
+.font80[
+&gt;Specifically, I am attempting to reproduce OUTPUT X (e.g., table 1, figure 3). I found that the following components are required to reproduce to reproduce OUTPUT X:     
+
+```md
+         OUTPUT X
+            └───[code] formatting_table1.R
+                ├───output1_part1.txt  
+                |   └───[code] output_table1.do           
+                |       └───[data] analysis_data01.csv
+                |          └───[code] data_cleaning01.R*
+                |             └───[data] UNKNOWN
+                └───output1_part2.txt  
+                    └───[code] output_table2.do           
+                        └───[data] analysis_data02.csv
+                           └───[code] data_cleaning02.R
+                              └───[data] admin_01raw.csv* 
+```
+
+&gt;I have marked with an asterisk (\*) the items that I could not find in the reproduction materials: data_cleaning01.R and admin_01raw.csv. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as UNKNOWN above) in the reproduction materials.
+&gt;
+&gt;I understand that this request will require some work for you or somebody in your research group, but I want to assure you that I will add these missing files to the reproduction package for your paper on the ACRE platform. Doing this will ensure that you will not be asked twice for the same missing file.
+]
+
+---
+count:false 
+
+# An example of well described issues:
+
+.font80[
+&gt;Specifically, I am attempting to reproduce OUTPUT X (e.g., table 1, figure 3). I found that the following components are required to reproduce to reproduce OUTPUT X:     
+
+```md
+         OUTPUT X
+            └───[code] formatting_table1.R
+                ├───output1_part1.txt  
+                |   └───[code] output_table1.do           
+                |       └───[data] analysis_data01.csv
+*               |          └───[code] data_cleaning01.R*
+*               |             └───[data] UNKNOWN
+                └───output1_part2.txt  
+                    └───[code] output_table2.do           
+                        └───[data] analysis_data02.csv
+                           └───[code] data_cleaning02.R
+*                             └───[data] admin_01raw.csv* 
+```
+
+&gt;I have marked with an asterisk (\*) the items that I could not find in the reproduction materials: **data_cleaning01.R** and **admin_01raw.csv**. After accessing these files, I will also be able to identify the name of the raw data set required to obtain output1_part1.txt. This is to let you know that I may need to contact you again if I cannot find this file (labeled as **UNKNOWN** above) in the reproduction materials.
+&gt;
+&gt;I understand that this request will require some work for you or somebody in your research group, but I want to assure you that I will add these missing files to the reproduction package for your paper on the ACRE platform. **Doing this will ensure that you will not be asked twice for the same missing file.**
+]
+
+---
+background-image:  url(Images/use1.png)
+background-size:  500px
+background-position:   0% 0%   
+count:false
+# How Do I Get Started?
+
+.center[
+.font120[
+    &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  [**Use it**](https://www.socialsciencereproduction.org) for your class &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;or independent project
+]
+]
+
+---
+background-image: url(Images/use2.png), url(Images/use1.png)
+background-size:  600px, 500px
+background-position:  35% 100%, 0% 0%   
+count:false
+# How Do I Get Started?
+
+.center[
+.font120[
+    &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  [**Use it**](https://www.socialsciencereproduction.org) for your class &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;or independent project
+]
+]
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.font120[
+Consult the &lt;br&gt; supporting &lt;br&gt;
+[**guide**](https://bitss.github.io/ACRE/)
+]
+
+---
+background-image: url(Images/use3.png) ,url(Images/use2.png), url(Images/use1.png)
+background-size:  400px,  600px, 500px
+background-position:  100% 0%, 35% 100%, 0% 0%   
+count:true
+# How Do I Get Started?
+
+.center[
+.font120[
+    &amp;nbsp; &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;  [**Use it**](https://www.socialsciencereproduction.org) for your class &lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;or independent project
+]
+]
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.font120[
+Consult the &lt;br&gt; supporting &lt;br&gt;
+[**guide**](https://bitss.github.io/ACRE/)
+]
+.right[
+.font120[
+[**Ask**](https://forum.socialsciencereproduction.org) questions
+]
+]
+
+---
+background-image: url("Images/3s_change.png")
+background-size: contain
+background-position: 50% 100%  
+# Change is Happenning: Christensen et. al., ([2020](https://osf.io/preprints/metaarxiv/5rksu/))
+
+
+---
+background-image: url(Images/figure_1_1.png)
+background-size: 900px 
+background-position: 50% 80%
+count: false
+
+# Today's Presentation
+
+.font180[
+- Part I: Transparency in Research 
+
+
+- Part II: Transparency in Policy Analysis
+
+]
+
+---
+background-image: url(Images/figure_1_1_black.png)
+background-size: 900px 
+background-position: 50% 80%
+count: false
+
+# Today's Presentation
+
+.font180[
+- Part I: Transparency in Research 
+
+
+- **Part II: Transparency in Policy Analysis**
+
+]
+
+
+
+---
+count: true
+name: motivation
+background-image: url("Images/alternative-facts-crowd.png"), url("Images/senator1.png"), url("Images/senator2.png")
+background-size: 900px, 250px, 250px
+background-position: 0% 10%, 100% 0%, 100% 80%   
+
+
+# Motivation: Rise of Alternative Facts
+
+
+&lt;!--
+&lt;br&gt;
+&lt;iframe width="360" height="250" src="https://www.youtube.com/embed/rV_YxKOE90g?start=188" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+--&gt;
+
+.pull-right[
+*Senator 1 [discussing facts](https://www.youtube.com/embed/rV_YxKOE90g?start=188) on &lt;br&gt;
+ unemployment insurance* &lt;br&gt; 
+
+*Interviewer:* “We I have looked at&lt;br&gt; 
+ what economist are saying, and [...] &lt;br&gt;there is no measurable evidence that people are staying at home because of [$600 unemp. insurance]” 
+
+*Senator1:* “[scoffs] I don’t know which economist you are talking about, but ...” 
+
+&lt;br&gt;
+*Senator 2 [discussing facts](https://youtu.be/_uy8D7MXSYo?t=364) &lt;br&gt;
+on costs of healthcare reform*  
+
+*Senator2:* “...I don’t think there is a &lt;br&gt; 
+study out there that does not &lt;br&gt; 
+suggest suggests that [proposed &lt;br&gt; reform] is far less expensive than [status quo]"
+]
+
+
+---
+background-image: url(Images/figure_1_1.png)
+background-size: contain
+count:false
+
+# How This Affects The Evidence Based Policy Link?
+
+
+---
+background-image: url(Images/figure_1_1_black.png)
+background-size: contain 
+# How This Affects The Evidence Based Policy Link?  
+
+---
+count: true
+# Possible Mechanism: Opaqueness of Policy Analysis
+
+.font130[
+- Incredible Certitudes (Manski, [2011](https://academic.oup.com/ej/article-abstract/121/554/F261/5079436))  
+
+- Report wars (Wesselink et al, [2013](https://www.sciencedirect.com/science/article/abs/pii/S1462901112002365))
+
+Low overall credibility of PA   
+&amp;nbsp; &amp;nbsp; &amp;#8627; 
+   credibility based on reputation ("serious")   
+&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;  &amp;#8627; assignment of reputation varies across political positions
+]
+--
+.font130[
+- Parallels to "Reproducibility Crisis" and Open Science reponse (Hoces de la Guardia, Grant, Miguel [2020](https://academic.oup.com/spp/advance-article/doi/10.1093/scipol/scaa067/6018524?guestAccessKey=ac30d681-5391-4f91-b4d8-44c6aed11161)). Propose:  
+  - Core principles for Open Policy Analysis (OPA) in output, analysis and materials 
+  - Agenda to implement and document how OPA can be applied into several policy issues
+ 
+- Here we will review the application of OPA to mass deworming interventions 
+]
+
+
+---
+
+count: true
+# Deworming Interventions   
+ - Parasitic worm infections are endemic in many countries, disproportionately affecting the poor  
+ - They interfere with regular bodily processes by decreasing nutrient uptake and can thus lead to serious consequences on human health, education outcomes, and long-term economic well being  
+ - Mass deworming interventions, at school level, have been propose as a cost-effective approach to tackle this problem
+
+--
+ 
+## Different settings for deworming  
+- Context of original study (Kenya, 1998-99) had very high prevalence rates of worm infections
+- Implementation costs where very low ($0.42 per round of treatment)
+- Length of treatment was relatively short (2.4 years)
+- Current deworming settings have lower prevalnce rates, 
+varying implementation costs and length of treatments
+
+--
+
+## Strong debate around initial results  
+- Ozier ([2020](https://academic.oup.com/wbro/advance-article/doi/10.1093/wbro/lkaa005/6009048)) summarizes differences between original findings (Miguel and Kremer 2004) and a re-analysis (Aiken et al, 2015). Emphazises the role of communication of results in a reanalysis. 
+- This type of debate (result/re-analysis) can be seen in several other topics. For example: minimum wage, inmigration, taxation. 
+- OPA need not guarante agreement on key research finding, but should help avoid multiple policy reports
+
+---
+background-image: url(Images/opa_framework.svg)
+background-size: 800px
+background-position: 60% 0%
+count:true
+  
+# A Framework for Open Policy Analysis
+.pull-left[
+Hoces de la Guardia,  
+Grant, Miguel ([2020](https://academic.oup.com/spp/advance-article/doi/10.1093/scipol/scaa067/6018524?guestAccessKey=ac30d681-5391-4f91-b4d8-44c6aed11161))
+]
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+## Contributions of OPA to deworming:  
+  1. Selected one policy estimate among several alternatives and establish a clear link between it and underlying assumptions 
+  2. Added documentation to increase reproducibility 
+  3. Created a public repository with all materials for one-click reproducibility 
+
+&lt;!--
+ADD SLIDE ON HOW OPA IS MAINLY ABOUT IMPROVING DOCUMENTATION 
+--&gt;
+
+---
+background-image: url(Images/dw-open-out1.png), url(Images/dw-open-out2.png), url(Images/dw-open-out3.png), url(Images/open_output_all.svg)  
+background-size: 500px, 500px, 500px, 100px
+background-position: 100% 80%, 70% 40%, 40% 0%, 15% 5%
+count: true
+# Open Output
+
+.pull-left[
+## [Demo](https://bitss-opa.shinyapps.io/dw-app/)
+
+&lt;br&gt;
+## Main features
+- One clear output  
+previously agreed in   
+consultation with  
+policy partner
+- Two additional tabs to modify assumptions  
+(key assumptions and all assumptions)
+- Each source is classified into research,   
+data, or guesswork
+- High level equations added to illustrate location of components
+- Added feature to modify standard deviations
+- Track values of each component
+
+
+]
+
+---
+background-image: url(Images/dw-open-an2.png), url(Images/dw-open-an1.png), url(Images/open_analysis.svg)   
+background-size: 400px, 400px, 100px
+background-position: 100% 100%, 70% 0%, 15% 5%
+count: true
+# Open Analysis
+
+.pull-left[
+## [Demo](https://bitss-opa.github.io/opa-deworming/)
+&lt;br&gt;
+## Main features
+- Complete narrative description of the methodology
+- Translation of each narrative step into an equation
+- Implementation of each equation into code
+- Combine all of the above into using a dynamic document (RMarkdown)
+- Presentation of narrative, equations, and code in layered fashion to avoid overwhelming the reader
+Icon figure  
+
+]
+
+---
+background-image: url(Images/dw-open-mat2.png), url(Images/dw-open-mat1.png), url(Images/open_materials.svg)  
+background-size: 600px, 600px, 100px
+background-position: 100% 100%, 70% 0%, 15% 5%
+count: true
+# Open Materials
+
+.pull-left[
+## [Demo](https://github.com/BITSS-OPA/opa-deworming)
+&lt;br&gt;
+## Main features
+- One-click reproducible   
+documentation and app
+- Extensive readme files
+- Clear folder structure
+- Version controlled
+- Open data
+- Acknowledgment to all contributors
+
+]
+
+
+---
+background-image: url(Images/dw-nopen-out2.png), url(Images/dw-nopen-out3.png)
+background-size: 800px, 800px
+background-position: 90% 00%, 90% 100%
+count: true
+exclude:true
+# What happens if one principle fails: Opaque Output
+
+.pull-left[
+- Policy estimates of approach 2   
+of deworming (Baird et al, 2016)
+- Assume Open Analysis and   
+Open Materials
+- Good for researchers 
+- Unclear for policy analysts
+- Allows policy makers to  
+cherry pick results
+- Does not disclose uncertainty
+- Unclear separation of roles  
+between policy analyst and   
+policy maker (Truman's request  
+for a "one-handed" economist)
+]
+
+---
+count: true
+exclude:true
+
+# Opaque Analysis/Materials
+&lt;br&gt;
+.font140[
+-  Assume open output and open materials  
+-  In this scenario we can have two policy analyses: one from advocates and one from opponents
+-  Each analysis can claim to be open source. Code is available, reproducible, and each as an interactive app. 
+-  But each analysis can bury in their code analytical choices that move the final policy estimate in their favor
+-  Same though exercise can be done with opaque materials
+]
+
+---
+count: true
+exclude:true
+
+# Lessons for future OPA projects: Timeline
+.font110[
+1. Reviewed existing documentation  
+2. Review code/spreadsheets and write down missing documentation. 
+3. Add equations to reflect any additional clarifying steps. 
+4. Translate analysis to code scripts (ideally open source software)  
+5. Check for computational reproducibility and consult with original analysts for discrepancies/further questions
+6. Discuss with policy partner on target policy estimate
+7. Draft doodle of app 
+8. Incorporate any potential new analysis (repeat steps 1 - 3) 
+9. Present draft of OPA (DD and doodle of app) to policy partner
+10. Incorporate comments into documentation of the OPA
+11. Build app based on analysis of dynamic document 
+12. Incorporate any additional features requested by policy partner
+13. Verify that all three components produce the same output
+14. Publish v1.0
+]
+
+---
+count: true
+exclude:true
+
+# Useful practices developed during the project
+
+&lt;br&gt;
+.font120[
+## Documentation of analysis and app are connected
+- Each analytic step is declared in the documentation and wrapped in a function
+- All this steps are used to produce the results in the documentation
+- The steps are also stored in a file that is later sourced in the app. 
+- If something changes in the report, it will update the app. 
+
+## Style guide 
+- Group objects according to use: only within the documentation, for simulations, and for the app
+- Use diagram trees to depict nested relationships
+]
+
+
+---
+count: true
+
+
+# Lessons for future OPA projects: Costs
+.font120[
+- Costs (approx bandwidth over a year at full time): 
+ - Principal Investigator 30-50% 
+ - Research assistant/programmer 100-150% 
+ - Program Manager 20%-30% 
+ - Original researcher: 1-5%
+ 
+- Not all policy analysis justify this level of effort
+ 
+- Characteristics that might justify an OPA: 
+ - Topics with strong disagreement on the facts among analysts 
+ - Recurrent reports (eg. ex-ante economic analysis from development banks/agencies)
+ - Topics that have large expected welfare effects (eg. tax reform, social cost of carbon)
+ 
+- With each new OPA project, templates will emerge and costs will likely fall  
+]
+---
+count: true
+# Additional Benefits of OPA 
+
+## Easy to update and reuse  
+After deworming OPA is released, anybody can modify and improve into a newer version  
+
+## Clearer connection of how evidence from research is used in policy analysis
+Researchers can see clearly where their estimates are being used in a policy analysis. For example, the OPA can be used to justify power calculations of potential new studies. 
+
+## Connection with forecasting
+When there is little information for a parameter used in an OPA, a forecasting exercise can be carried out to elicit expert knowledge (DellaVigna, Pope, Vivalt [2019](https://science.sciencemag.org/content/366/6464/428.summary)).
+
+
+
+---
+class: inverse, center, middle
+
+# .font140[ Thank You]
+
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=100%&gt;&lt;/html&gt;
+
+.font190[
+&lt;fhoces@berkeley.edu&gt;
+]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Workflow Critique Presentation</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Mohammad Dastgheib" />
+    <script src="libs/header-attrs-2.11/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Workflow Critique Presentation
+## PSYC 259 — Principles of Data Science — UC Riverside
+### Mohammad Dastgheib
+### February 2022
+
+---
+
+# Today's Presentation
+
+.font180[
+- Part I: Workflow
+    - a brief description of my data/project
+    - data storage — research personnel — infrastructures 
+    - data analysis/report packages
+- Part II: Critique
+    - Efficiency
+    - Fidelity
+    - Sharing/Reproducibility
+]
+
+&lt;style&gt;
+
+.center2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+
+pre.sourceCode {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+
+/*
+.remark-slide-number {
+  position: inherit;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 0;
+  height: 4px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: blue;
+}
+*/
+&lt;/style&gt;
+
+
+
+&lt;style type="text/css"&gt;
+# CSS for including pauses in printed PDF output (see bottom of lecture)
+@media print {
+  .has-continuation {
+    display: block !important;
+  }
+}
+
+&lt;/style&gt;
+
+
+
+
+---
+class: inverse, center, middle
+
+# .font140[a little background — Workflow]
+
+---
+# Is the Role of Sleep in Memory Consolidation Overrated?
+
+
+.font140[
+- For this presentation, I go over the declarative memory data analysis only
+- 3 experimental condition (NAP, MED, WAKE) — comparison of memory retention across groups
+
+- Word-pair associate task 
+  - 60 word-pairs pre-treatment and 60 post-treatment (20 same + 20 novel + 20 recombined)
+  - say *YES* if you've seen the exact pair before
+
+]
+---
+# Workflow cont. — other info
+
+.font140[
+- Overall analysis pipeline
+  - confusion matrix for their response
+    - `\(Hit\)`, `\(Miss\)`, `\(False Alarm\)`, `\(Correct Rejection\)`
+  - Geometric-mean (G-Mean) as a measure of performance of each participant
+    - higher G-Mean `\(\Longrightarrow\)` superior consolidation
+    
+- participants' responses were recorded on paper (series of 0s and 1s)
+  - raw values inserted in a Microsoft Excel spreadsheet
+  - *Hit*, *Miss*, *False Alarm*, and *Correct Rejection* values calculated by a simple formula
+- One graduate student (myself) and two RAs were responsible for collecting data
+- Excel sheet imported to the RStudio program for further analyses + write up in RMarkdown
+]
+---
+class: inverse, center, middle
+
+# .font140[Critique]
+
+---
+# Efficiency
+
+.font140[
+- data collection improvements
+  - employing a simple psychtoolbox code
+    - higher accuracy in data collection
+    - minimizing error in data entry process
+    - facilitation of data transfer to other programs
+    - dropping the Microsoft Excel from workflow (?)
+- data analysis improvements
+  - creating additional cutoff measures to avoid hardcoding
+]
+.pull-leftt[
+&lt;img src="Images/wf1.png" width="100%" /&gt;
+]
+---
+# Efficiency cont.
+
+### automating the installation of new required packages and preventing reinstalling those already installed.
+&lt;img src="Images/wf2.png" width="100%" /&gt;
+
+---
+# Fidelity
+
+.font140[
+- Sanity check!
+  - plotting the distribution of results
+- a clear and consistent naming convention
+- if required to drop values ±2 S.D, then clearly annotate
+- for the sake of consistency, stick with Tidyverse package
+  - admittedly, it may not be 100% possible
+- pivoting the datasets
+  - at the time, I re-entered the data manually in a Excel spreadsheet and imported in R!
+  - 🤦🤦
+]
+
+---
+# Sharing/Reproducibility
+
+.font140[
+- my original raw data were posted in OSF and my GitHub repository
+- I also wrote the whole dissertation in RMarkdown and uploaded that in my GitHub Repo
+  - theoretically, it should be reproducible!
+- Something I recently noticed: some packages I used have changed...
+  - ideally, using stable packages and avoiding "dev" packages (?)
+]
+
+---
+
+class: inverse, center, middle
+
+# .font140[ Thank You]
+
+
+&lt;html&gt;&lt;div style='float:left'&gt;&lt;/div&gt;&lt;hr color='#EB811B' size=1px width=100%&gt;&lt;/html&gt;
+
+.font190[
+&lt;mdast003@ucr.edu&gt;
+]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
